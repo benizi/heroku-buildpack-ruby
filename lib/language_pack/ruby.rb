@@ -466,7 +466,7 @@ def attribute(name, value, force_string = false)
   if value
     value_string =
       if force_string
-        '"' + value + '"'
+        '"' + value.gsub(/[\\"]/, '\\\1') + '"'
       else
         value
       end
