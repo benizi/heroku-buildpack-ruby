@@ -10,7 +10,7 @@ require "language_pack/shell_helpers"
 def clear_cached_assets(path)
   return unless path
   system("rm -vrf #{path}/tmp/cache/assets")
-  system("rm -vrf #{path}/public/assets/*.json")
+  system("rm -vrf #{path}/public/assets")
 end
 
 LanguagePack::Instrument.trace 'compile', 'app.compile' do
