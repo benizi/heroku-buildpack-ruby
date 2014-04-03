@@ -421,6 +421,7 @@ WARNING
   end
 
   def load_default_cache?
+    return true
     new_app? && ruby_version.default?
   end
 
